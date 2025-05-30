@@ -1,14 +1,130 @@
 /* Používáme intuitivní výpočet rozměrů prvků. */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
+:root {
+  --neutral: #faeee7;
+  --primary: #33272a;
+  --secondary: #eebbc3;
+
+}
+
+/*
 html {
   font-family: sans-serif;
 }
+
 
 .container {
   max-width: 20rem;
   margin-right: auto;
   margin-left: auto;
+}
+  */
+
+body {
+  font-family: "Noto Serif", sans-serif;
+  text-align: center;
+  background-color: var(--neutral)
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  margin-top: 30vh
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: var(--neutral);
+  font-size: 20px;
+  border-bottom: 1px solid var(--primary);
+
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  font-family: serif;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary);
+  padding: 0 10px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 70px 0;
+  min-height: 100vh;
+}
+
+#header-content {
+  background-color: var(--neutral);
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  color: var(--primary);
+  font-size: 25px;
+  margin: 25px 0;
+  font-style: italic;
+}
+
+#contact {
+  background-color: var(--secondary);
+  color: var(--neutral);
+
+}
+
+#contact h1 {
+  border-bottom: 5px solid var(--neutral);
+  width: fit-content;
+  margin: auto;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  place-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+footer {
+  border-top: 3px solid var(--primary);
+  color: var(--base-100);
+  font-size: 25px;
+  padding: 30px;
+}
+
+#contact .hanca,
+#contact .terka {
+  height: 525px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neutral);
+  text-decoration: none;
+  color: var(--primary);
+  border-radius: 5px;
+  box-shadow: 8px 8px 10px 5px rgba(100, 100, 100, 1);
 }
